@@ -1,0 +1,56 @@
+﻿body {
+font-family: Verdana, Arial, sans-serif;
+background-image: url(fundo.jpg);
+background-repeat: repeat-x;
+background-color: #006666;
+margin-left: 100px;
+width: 350px;
+}
+
+#conteudo {
+	margin: 5px 100px;
+	position: absolute;
+	width: 400px;
+	top: 133px;
+	left: 175px;
+}
+
+#endereço {
+	margin: 5px 100px;
+	background-image: url(.jpg);
+	position: absolute;
+	width: 150px;
+	height: 300px;
+	top: 132px;
+	left: 0px;
+}
+
+# total {
+margin-left: 15px;
+position: absolute;
+width: 800px;
+height: 600px;
+left: 50%;
+margin-left: -600px;
+}
+
+
+#propaganda {
+font-family: Verdana, Arial, sans-serif;
+font-size: 12;
+	margin: 5px 100px;
+	position: absolute;
+	top: 131px;
+	left: 669px;
+}
+
+#paragrafo {
+line-height: 1.3em;
+text-align: justify;
+text-indent: 2em;
+}
+
+#produto {
+text-indent: 1.3em;
+margin: 10px -15px;
+}

@@ -1,0 +1,264 @@
+﻿<!DOCYTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<title>ECO Empresa</title>
+
+<script language=javascript>
+function Mascara (formato, keypress, objeto){
+campo = eval (objeto);
+
+// cep
+if (formato=='cep'){
+separador = '-';
+conjunto1 = 5;
+if (campo.value.length == conjunto1){
+campo.value = campo.value + separador;}
+}
+
+// cpf
+if (formato=='cpf'){
+separador1 = '.'; 
+separador2 = '-'; 
+conjunto1 = 3;
+conjunto2 = 7;
+conjunto3 = 11;
+if (campo.value.length == conjunto1)
+  {
+  campo.value = campo.value + separador1;
+  }
+if (campo.value.length == conjunto2)
+  {
+  campo.value = campo.value + separador1;
+  }
+if (campo.value.length == conjunto3)
+  {
+  campo.value = campo.value + separador2;
+  }
+}
+
+// nascimento
+if (formato=='nascimento'){
+separador = '/'; 
+conjunto1 = 2;
+conjunto2 = 5;
+if (campo.value.length == conjunto1)
+  {
+  campo.value = campo.value + separador;
+  }
+if (campo.value.length == conjunto2)
+  {
+  campo.value = campo.value + separador;
+  }
+}
+
+// telefone
+if (formato=='telefone'){
+separador1 = '(';
+separador2 = ')';
+separador3 = '-';
+conjunto1 = 0;
+conjunto2 = 3;
+conjunto3 = 8;
+if (campo.value.length == conjunto1){
+campo.value = campo.value + separador1;
+}
+if (campo.value.length == conjunto2){
+campo.value = campo.value + separador2;
+}
+if (campo.value.length == conjunto3){
+campo.value = campo.value + separador3;
+}
+}
+
+
+}
+</SCRIPT>
+
+
+
+<style type="text/css">
+.menu{
+float: left;
+width: 110px;
+}
+
+.field {
+border: 2px #336633 solid;
+}
+
+.borda {
+border: 2px #006633 solid;
+}
+
+</style>
+
+<link href="estilo_text_font.css" rel="stylesheet" type="text/css"/>
+
+</head>
+
+<body>
+
+
+<div id="total" >
+
+<img src="banner.gif"/>
+
+</div>
+
+<div class="menu">
+
+<div id="endereço">
+
+<p>
+<a href="index.html"><img src="home.png" border="0"></a>
+<a href="produto.html"><img src="produto.png" border="0"></a>
+<a href="cadastro.html"><img src="cadastro.png" border="0"></a>
+<a href="fale_conosco.html"><img src="fale_conosco.png" border="0"></a>
+<a href="empresa.html"><img src="imprensa.png" width="150" border="0"></a>
+</p>
+
+
+</div>
+
+
+<div id="conteudo">
+
+<fieldset class="borda">
+
+<p>
+  <center><h2>Cadastro Pessoa Física</h2></center>
+
+
+<p>
+<label for="codigo">Código: </label>
+<input type="text" name="codigo" id="codigo" maxlength="5" size="8"/>
+
+<p> 
+   <label for="nome">Nome: </label>
+   <input type="text" name="nome" id="nome"  maxlength="100"size="48"/>
+   </p>
+
+<p>
+Sexo: 
+	<input type="radio" name="tipo" value="pf" id="pf"/>
+		<label for="pf">Masculino</label>
+	<input type="radio" name="tipo" value="pj" id="pj"/>
+		<label for="pj">Femino</label>
+</p>
+   <p>
+<label for="nome">Endereço: </label>
+   <input type="text" name="endereco" id="endereco" maxlength="100" size="30" />
+
+<label for="Numero">Nº:</label>
+   <input type="text" name="numero" id="numero" maxlength="5"size="1" />
+   </p>
+
+   <p>
+   <label for="complemento">Complemento: </label>
+   <input type= "text" name="complememto" id="complemento" maxlength="50"size = "48" />
+   </p>
+
+   <p>
+   <label for="">Bairro: </label>
+   <input type= "text" name="Bairro" id="Bairro" maxlength="50"size = "48" />
+   </p>
+
+
+   <p> 	
+   <label for="cep">Cep: </label>
+   <input type= "text" name="cep" id="cep" maxlength="5" size = "5" /> - 
+   <input type= "text" name="cep" id="cep" maxlength="3" size = "3" />
+   </p>
+   
+  
+    <p>
+    <label for="cidade">Cidade: </label>
+     <select name="Cidade" id="cidade" size="1">
+         <option selected>...</option>
+         <option value="aracatuba">Araçatuba</option>
+         <option value="assis">Assis</option>
+         <option value="bauru">Bauru</option>         
+         <option value="marilia">Marília</option>         
+    </select>
+
+
+    <label for="estado">UF: </label>
+     <select name="uf" id="uf" size="1">
+         <option selected>...</option>
+         <option value="ac">AC</option>
+         <option value="am">AM</option>
+         <option value="ce">CE</option>         
+         <option value="rj">RJ</option>                  
+         <option value="rr">RR</option>
+         <option value="sp">SP</option>
+         <option value="to">TO</option>         
+     </select>
+   </p>
+
+<TR>
+                <TD class=texto width="16%">Data Nascimento:</TD>
+                <TD class=texto width="32%"> <INPUT 
+            class=campoform 
+            onkeypress="Mascara('nascimento', window.event.keyCode, 'document.cadastro.nascimento');" 
+            maxLength=10 size=10 name=nascimento>(dd/mm/aaaa) </TD></TR>
+
+   <p>
+   <label for="data_cad">Data de Cadastro: </label>
+   <input type= "text" name="data_cad" id="data_cad" />
+   </p>
+
+   <p>
+   <label for="email">E-Mail: </label>
+   <input type= "text" name="email" id="email" />
+   </p>
+   
+    
+<p>
+<center><h3>Contatos</h3></center>
+</p>
+
+<p>
+      <FORM name=cadastro action=cadastro.asp method=post>
+
+            <INPUT id=email_antigo type=hidden name=email_antigo> <INPUT type=hidden name=codigo> 
+
+          <TD class=texto width="40%" height=25>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD class=texto width="8%">Telefone:</TD>
+                <TD class=texto width="32%"><INPUT class=campoform 
+                  onkeypress="Mascara('telefone', window.event.keyCode, 'document.cadastro.telefone');" 
+                  maxLength=13 size=12 name=telefone> </TD>
+                </TR>
+
+
+
+</TBODY>
+</TABLE>
+</TD>
+</FORM>
+</p>
+
+<p>
+</p>
+
+<p>
+</p>
+
+
+</fieldset>
+</div>
+
+<div id="propaganda">
+<img src="ame.jpg" alt="ECO"/>
+
+</div>
+
+</div>
+<body>
+
+</html>

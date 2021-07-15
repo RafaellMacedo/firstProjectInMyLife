@@ -1,0 +1,30 @@
+﻿body {
+font-family: Verdana, Arial, sans-serif;
+background-image: url(../produto/.jpg);
+background-color: green;
+}
+
+#conteudo {
+position: absolute;
+width: 500px;
+top: 137px;
+left: 200px;
+}
+
+#endereço {
+background-image: url(../produto/.jpg);
+position: absolute;
+top: 137px;
+left: 15px;
+}
+
+#texto {
+background-image: url(../produto/blue_banner.jpg);
+position: relative;
+}
+
+#propaganda {
+position: absolute;
+top: 137px;
+left: 925px;
+}
